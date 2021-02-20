@@ -34,8 +34,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 5
-    y: 5
+    x: 0
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -109,17 +109,15 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: Hurmit Nerd Font Mono
     # family: Iosevka
     # family: SpaceMono Nerd Font
-    # family: Hack
-    # family: BlexMono Nerd Font Mono
-    # family: FiraCode
-    # family: VictorMono Nerd Font
-    # family: UbuntuMono
+    family: BlexMono Nerd Font Mono
     # family: ShureTechMono Nerd Font
     # family: Mononoki Nerd Font
-    family: agave Nerd Font Mono
+    # family: JetBrainsMono Nerd Font
+    # family: agave Nerd Font Mono
+    # family: VT323
+    # family: Dina
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -130,7 +128,6 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    # family: Hurmit Nerd Font Mono
     # family: Iosevka
     # family: SpaceMono Nerd Font
     # family: Hack
@@ -155,7 +152,7 @@ font:
     # family: FiraCode
     # family: Hurmit Nerd Font Mono
     # family: TerminessTTF Nerd Font
-    #family: VictorMono Nerd Font
+    # family: VictorMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -173,18 +170,18 @@ font:
     # family: FiraCode
     # family: Hurmit Nerd Font Mono
     # family: TerminessTTF Nerd Font
-    #family: VictorMono Nerd Font
+    # family: VictorMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-  size: 11.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
-    x: 0
+    x: 1
     y: 1
 
   # Glyph offset determines the locations of the glyphs within their cells with
@@ -212,33 +209,34 @@ font:
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
-# Space Duck
+
 colors:
   # Default colors
   primary:
-    background: '#0f111b'
-    foreground: '#ecf0c1'
-  # Normal colors
-  normal:
-    black:   '#000000'
-    red:     '#e33400'
-    green:   '#5ccc96'
-    yellow:  '#b3a1e6'
-    blue:    '#00a3cc'
-    magenta: '#f2ce00'
-    cyan:    '#7a5ccc'
-    white:   '#686f9a'
+    background: '#2a2426'
+    foreground: '#ffead6'
 
+    # Normal colors
+  normal:
+    black:   '#1b181b'
+    red:     '#fc5133'
+    green:   '#80ac41'
+    yellow:  '#fec72f'
+    blue:    '#5f4494'
+    magenta: '#e44650'
+    cyan:    '#7e5a5e'
+    white:   '#ffead6'
+   
   # Bright colors
   bright:
-    black:   '#686f9a'
-    red:     '#e33400'
-    green:   '#5ccc96'
-    yellow:  '#b3a1e6'
-    blue:    '#00a3cc'
-    magenta: '#f2ce00'
-    cyan:    '#7a5ccc'
-    white:   '#f0f1ce'
+    black:   '#3a3634'
+    red:     '#fc5133'
+    green:   '#b4d973'
+    yellow:  '#f8fd63'
+    blue:    '#7b59c0'
+    magenta: '#EC8FD0'
+    cyan:    '#c3807a'
+    white:   '#ffead6'
 
   # Indexed Colors
   #
@@ -280,7 +278,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.00
+background_opacity: 0.95
 # background_opacity: 0.80
 
 #selection:

@@ -44,7 +44,7 @@ set wildignore+=*.DS_Store
 set wildignore+=*.aux,*.bbl,*.blg,*.brf,*.fls,*.fdb_latexmk,*.synctex.gz
 set wildignorecase  " ignore file and dir name cases in cmd-completion
 
-set ts=4 sw=4 sts=4 et ai   " default, use 4 spaces on tabs
+set ts=2 sw=2 sts=2 et ai   " default, use 4 spaces on tabs
 
 set scrolloff=5
 "set signcolumn=yes
@@ -79,7 +79,7 @@ let g:asmsyntax='nasm'  " syntax highlighting specifically NASM
 
 " ==================== AUTOCMDS ====================
 
-autocmd FileType asm    setlocal ts=8 sw=8 sts=8 noexpandtab    " For assembly, use tabs
+au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
@@ -146,6 +146,8 @@ nnoremap <silent> tt :tabnew<CR>
 "" Fast reload source .vimrc file
 map <silent> <leader>vr :source $MYVIMRC<CR>
 
+map <silent> <leader>v2 :Vimwiki2HTML<CR>
+
 "==================== PLUGINS ====================
 
 call plug#begin()
@@ -159,8 +161,8 @@ Plug 'sbdchd/neoformat', { 'on': 'Neoformat' }
 Plug 'mhinz/vim-startify'
 Plug 'puremourning/vimspector'
 Plug 'sheerun/vim-polyglot'
-Plug 'pineapplegiant/spaceduck'
 Plug 'vimwiki/vimwiki'
+Plug 'ARM9/arm-syntax-vim'
 
 call plug#end()
 
