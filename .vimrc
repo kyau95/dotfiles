@@ -79,6 +79,13 @@ let g:asmsyntax='nasm'  " syntax highlighting specifically NASM
 
 " ==================== AUTOCMDS ====================
 
+" Automatically open NERDTree
+autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree | wincmd p
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 
 let &t_SI = "\e[6 q"
@@ -146,10 +153,6 @@ nnoremap <silent> tt :tabnew<CR>
 "" Fast reload source .vimrc file
 map <silent> <leader>vr :source $MYVIMRC<CR>
 
-map <silent> <leader>v2 :Vimwiki2HTML<CR>
-
-"==================== PLUGINS ====================
-
 call plug#begin()
 
 Plug 'dense-analysis/ale'
@@ -159,10 +162,7 @@ Plug 'ervandew/supertab'
 Plug 'junegunn/goyo.vim'
 Plug 'sbdchd/neoformat', { 'on': 'Neoformat' }
 Plug 'mhinz/vim-startify'
-Plug 'puremourning/vimspector'
-Plug 'sheerun/vim-polyglot'
-Plug 'vimwiki/vimwiki'
-Plug 'ARM9/arm-syntax-vim'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -221,3 +221,9 @@ nmap <leader>dx :VimspectorReset<CR>
 nmap <leader>de :VimspectorEval
 nmap <leader>dw :VimspectorWatch
 nmap <leader>do :VimspectorShowOutput
+
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>

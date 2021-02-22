@@ -34,8 +34,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
-    y: 0
+    x: 2
+    y: 2
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -111,14 +111,14 @@ font:
     #   - (Windows) Consolas
     # family: Iosevka
     # family: SpaceMono Nerd Font
-    family: BlexMono Nerd Font Mono
+    # family: BlexMono Nerd Font Mono
     # family: ShureTechMono Nerd Font
     # family: Mononoki Nerd Font
     # family: JetBrainsMono Nerd Font
     # family: agave Nerd Font Mono
-    # family: VT323
     # family: Dina
-
+    family: Terminus
+    
     # The `style` can be specified to pick a specific face.
     style: Regular
 
@@ -176,7 +176,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 9.0
+  size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -278,7 +278,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.95
+background_opacity: 0.90
 # background_opacity: 0.80
 
 #selection:
