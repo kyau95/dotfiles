@@ -80,16 +80,12 @@ let g:asmsyntax='nasm'  " syntax highlighting specifically NASM
 " ==================== AUTOCMDS ====================
 
 " Automatically open NERDTree
-autocmd VimEnter * NERDTree
-autocmd VimEnter * NERDTree | wincmd p
+"" autocmd VimEnter * NERDTree
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
 
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
-
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
 
 " Optionally reset the cursor on start:
 augroup myCmds

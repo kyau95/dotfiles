@@ -34,8 +34,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 2
-    y: 2
+    x: 0
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -109,16 +109,15 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: Iosevka
     # family: SpaceMono Nerd Font
-    # family: BlexMono Nerd Font Mono
-    # family: ShureTechMono Nerd Font
-    # family: Mononoki Nerd Font
+    family: CaskaydiaCove Nerd Font Mono
+    # family: Mononoki Nerd Font Mono
     # family: JetBrainsMono Nerd Font
-    # family: agave Nerd Font Mono
-    # family: Dina
-    family: Terminus
-    
+    # family: Terminus
+    # family: FiraCode Nerd Font Mono
+    # family: DaddyTimeMono Nerd Font
+
+
     # The `style` can be specified to pick a specific face.
     style: Regular
 
@@ -176,7 +175,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 10.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -210,33 +209,94 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
+# Daydream theme
 colors:
-  # Default colors
-  primary:
-    background: '#2a2426'
-    foreground: '#ffead6'
+    primary:
+        background:	'#090d12'
+        foreground:	'#f2c29b'
+    
+    normal:
+        black:    '#a9876c'
+        red:      '#855b3a'
+        green:    '#9f683d'
+        yellow:   '#976640'
+        blue:     '#b27342'
+        magenta:  '#c87f45'
+        cyan:     '#d58546'
+        white:    '#f2c29b'
+    
+    bright:
+        black:    '#a9876c'
+        red:      '#855b3a'
+        green:    '#9f683d'
+        yellow:   '#976640'
+        blue:     '#b27342'
+        magenta:  '#c87f45'
+        cyan:     '#d58546'
+        white:    '#f2c29b'
 
-    # Normal colors
-  normal:
-    black:   '#1b181b'
-    red:     '#fc5133'
-    green:   '#80ac41'
-    yellow:  '#fec72f'
-    blue:    '#5f4494'
-    magenta: '#e44650'
-    cyan:    '#7e5a5e'
-    white:   '#ffead6'
+# Quantum Colors (Firefox devtools)
+#colors:
+  ## Default colors
+  #primary:
+    #background: "0x2a2a2e"
+    #foreground: "0xD7D7DB"
+
+  ## Colors the cursor will use if `custom_cursor_colors` is true
+  #cursor:
+    #text:     "0x2a2a2e"
+    #cursor:   "0x75BFFF"
+
+  # Normal colors
+  #normal:
+    #black:    "0x2a2a2e"
+    #red:      "0xEB5368"
+    #green:    "0x87DE74"
+    #yellow:   "0xFFD866"
+    #blue:     "0x6B89FF"
+    #magenta:  "0xB98EFF"
+    #cyan:     "0x75BFFF"
+    #white:    "0xD7D7DB"
+
+  ## Bright colors
+  #bright:
+    #black:    "0x737373"
+    #red:      "0xFF7DE9"
+    #green:    "0x87DE74"
+    #yellow:   "0xFFD866"
+    #blue:     "0x6B89FF"
+    #magenta:  "0xB98EFF"
+    #cyan:     "0x75BFFF"
+    #white:    "0x939295"
+
+# Miramare colors
+#colors:
+  ## Default colors
+  #primary:
+    #background: '#2a2426'
+    #foreground: '#ffead6'
+
+    ## Normal colors
+  #normal:
+    #black:   '#1b181b'
+    #red:     '#fc5133'
+    #green:   '#80ac41'
+    #yellow:  '#fec72f'
+    #blue:    '#5f4494'
+    #magenta: '#e44650'
+    #cyan:    '#7e5a5e'
+    #white:   '#ffead6'
    
-  # Bright colors
-  bright:
-    black:   '#3a3634'
-    red:     '#fc5133'
-    green:   '#b4d973'
-    yellow:  '#f8fd63'
-    blue:    '#7b59c0'
-    magenta: '#EC8FD0'
-    cyan:    '#c3807a'
-    white:   '#ffead6'
+  ## Bright colors
+  #bright:
+    #black:   '#3a3634'
+    #red:     '#fc5133'
+    #green:   '#b4d973'
+    #yellow:  '#f8fd63'
+    #blue:    '#7b59c0'
+    #magenta: '#EC8FD0'
+    #cyan:    '#c3807a'
+    #white:   '#ffead6'
 
   # Indexed Colors
   #
@@ -278,7 +338,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.90
+background_opacity: 0.85
 # background_opacity: 0.80
 
 #selection:
