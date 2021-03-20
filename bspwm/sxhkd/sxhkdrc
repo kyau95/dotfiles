@@ -34,9 +34,9 @@ super + F6
 super + F7
     virtualbox
 
-# Thunar
+# pcmanfm
 super + F8
-    alacritty -e ranger
+    pcmanfm
 
 #Evolution
 super + F9
@@ -60,7 +60,7 @@ super + F12
 
 # NVIM
 super + e
-    kitty -e nvim
+    alacritty -e nvim
 
 # Firefox
 super + w
@@ -74,10 +74,6 @@ super + c
 super + h
     alacritty -e gotop
 
-# arcolinux-logout
-super + x
-    arcolinux-logout
-
 # Rofi theme selector
 super + r
     rofi-theme-selector
@@ -90,10 +86,6 @@ super + t
 super + v
     pavucontrol
 
-#Pragha
-super + m
-    pragha
-
 # Alacritty
 super + Return
     alacritty
@@ -104,8 +96,8 @@ super + Escape
 
 #Keyboard dependent
 #termite
-super + KP_Enter
-    kitty
+#super + KP_Enter
+#    kitty
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -113,7 +105,7 @@ super + KP_Enter
 
 #File-Manager
 super + shift + Return
-	alacritty -e ranger
+    pcmanfm
 
 #Keyboard dependent
 #File-Manager
@@ -122,7 +114,7 @@ super + shift + Return
 
 #dmenu
 super + shift + d
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+	  dmenu_run -c -l 6 -nb '#191919' -nf '#fea63c' -sb '#fc5133' -sf '#191919' -fn 'mononoki Nerd Font Mono:size=10'
 
 #reload sxhkd:
 super + shift + s
@@ -136,22 +128,6 @@ super + shift + s
 # CONTROL + ALT KEYS
 #################################################################
 
-#arcolinux-welcome-app
-ctrl + alt + w
-     arcolinux-welcome-app
-
-#arcolinux-tweak-tool
-ctrl + alt + e
-    arcolinux-tweak-tool
-
-# Ranger w/ alacritty
-ctrl + alt + b
-     alacritty -e ranger
-
-# Calcurse w/ kitty
-ctrl + alt + c
-     kitty -e calcurse
-
 #Chromium
 ctrl + alt + g
     chromium -no-default-browser-check
@@ -163,10 +139,6 @@ ctrl + alt + f
 #Nitrogen
 ctrl + alt + i
      nitrogen
-
-#arcolinux-logout
-ctrl + alt + k
-     arcolinux-logout
 
 #arcolinux-logout
 ctrl + alt + l
@@ -257,15 +229,6 @@ XF86AudioLowerVolume
 XF86AudioMute
     amixer -D pulse set Master 1+ toggle
 
-#Playerctl works for Pragha, Spotify and others
-#Delete the line for playerctl if you want to use mpc
-#and replace it with the corresponding code
-#mpc works for e.g.ncmpcpp
-#mpc toggle
-#mpc next
-#mpc prev
-#mpc stop
-
 #PLAY
 XF86AudioPlay
     playerctl play-pause
@@ -284,11 +247,11 @@ XF86AudioStop
 
 #Brightness up
 XF86MonBrightnessUp
-    xbacklight -inc 10
+    light -A 10
 
 #Brightness down
 XF86MonBrightnessDown
-    xbacklight -dec 10
+    light -U 10
 
 #########################
 #        POLYBAR        #

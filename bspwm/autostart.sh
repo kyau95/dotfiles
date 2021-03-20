@@ -19,19 +19,11 @@ export XMODIFIERS=@im=fcitx
 
 $HOME/.config/polybar/launch.sh &
 
-dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
 run nm-applet &
-run pamac-tray &
-run xfce4-power-manager &
-numlockx on &
-#blueberry-tray &
-picom --config $HOME/.config/bspwm/picom.conf &
-#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-#/usr/lib/xfce4/notifyd/xfce4-notifyd &
+run picom --experimental-backends &
 dunst > /dev/null 2>&1 &
-run volumeicon &
 nitrogen --restore &
 run fcitx &

@@ -159,6 +159,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'sbdchd/neoformat', { 'on': 'Neoformat' }
 Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -183,7 +184,7 @@ let g:ale_linters = {
   \ 'vim': ['vint'],
   \ 'cpp': ['clangd'],
   \ 'c': ['clangd'],
-  \ 'python': ['black']
+  \ 'python': ['pyright', 'black']
   \}
 
 " Only run linters in the g:ale_linters dictionary
@@ -199,11 +200,11 @@ let g:ale_sign_column_always=1
 let g:neoformat_enabled_python = ['black', 'yapf']
 let g:neoformat_cpp_clangformat = {
       \ 'exe': 'clang-format',
-      \ 'args': ['--style="{IndentWidth: 4}"']
+      \ 'args': ['--style="{IndentWidth: 2}"']
       \ }
 let g:neoformat_c_clangformat = {
       \ 'exe': 'clang-format',
-      \ 'args': ['--style="{IndentWidth: 4}"']
+      \ 'args': ['--style="{IndentWidth: 2}"']
       \ }
 
 let g:neoformat_enabled_cpp = ['clangformat']
