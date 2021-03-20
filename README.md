@@ -10,3 +10,5 @@
 > 
 > Taskbar: Polybar (design credit goes to u/windhowl1, made minor tweaks to it)
 > 
+
+![](fshot.png)
