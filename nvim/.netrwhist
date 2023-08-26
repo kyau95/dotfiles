@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
-let g:netrw_dirhist_6='/home/ky/polybar'
-let g:netrw_dirhist_5='/home/ky/.config/termite'
-let g:netrw_dirhist_4='/home/ky/.config/nvim/plugged/vimspector/gadgets/linux/vscode-cpptools'
-let g:netrw_dirhist_3='/home/ky/cpp-arcade'
-let g:netrw_dirhist_2='/home/ky/slstatus'
-let g:netrw_dirhist_1='/home/ky/dwm'
